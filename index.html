@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Under Construction</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #fafafa;
+      color: #222;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .box {
+      max-width: 480px;
+    }
+
+    .stripe {
+      height: 14px;
+      width: 100%;
+      margin: 0 auto 2rem;
+      border-radius: 7px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #f5b800,
+        #f5b800 16px,
+        #222 16px,
+        #222 32px
+      );
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #181818; color: #f0f0f0; }
+      p { color: #aaa; }
+    }
+  </style>
+</head>
+<body>
+  <main class="box">
+    <div class="stripe"></div>
+    <h1>Under Construction</h1>
+    <p>This website is currently being built. Please check back soon!</p>
+    <div class="stripe" style="margin: 2rem auto 0;"></div>
+  </main>
+</body>
+</html>
