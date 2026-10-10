@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Under Construction</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE BITS</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="nav">
+  <a class="logo" href="index.html">THE BITS</a>
+  <nav><ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="projects.html" class="">Projects</a></li>
+    <li><a href="contact.html" class="">Contact us</a></li>
+  </ul></nav>
+</header>
+<!-- D: HERO. Big text sits BEHIND the png. Put a transparent PNG in the box. -->
+<section class="hero">
+  <h1>THE BITS</h1>
+  <div class="media">
+    <!-- <img src="F_Images/hero.png" alt=""> -->
+  </div>
+</section>
 
-    html, body { height: 100%; }
+<!-- A: LATEST PROJECT + DEMO VIDEO -->
+<section class="latest">
+  <div>
+    <span class="pill">Latest project</span>
+    <h2>MyFairview</h2><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+  </div>
+  <div class="media wide">
+    <!-- <video src="F_Website/myfairview-demo.mp4" controls></video> -->
+  </div>
+</section>
 
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: #fafafa;
-      color: #222;
-      text-align: center;
-      padding: 1.5rem;
-    }
+<!-- B: PHONE RECORDING + BACKGROUND PHOTO + BUTTONS -->
+<section class="band">
+  <div class="media bg">
+    <!-- background photo: <img src="F_Images/band-bg.jpg" alt=""> -->
+  </div>
+  <div class="band-inner">
+    <div class="media phone">
+      <!-- <video src="F_App/myfairview-phone.mp4" autoplay muted loop playsinline></video> -->
+    </div>
+    <div>
+      <h2>MyFairview</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+      <div class="btns">
+        <a class="btn light" href="#">Website</a>
+        <a class="btn" href="F_App/myfairview.apk" download>Download APK</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    .box {
-      max-width: 480px;
-    }
-
-    .stripe {
-      height: 14px;
-      width: 100%;
-      margin: 0 auto 2rem;
-      border-radius: 7px;
-      background: repeating-linear-gradient(
-        -45deg,
-        #f5b800,
-        #f5b800 16px,
-        #222 16px,
-        #222 32px
-      );
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      font-size: 1.05rem;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body { background: #181818; color: #f0f0f0; }
-      p { color: #aaa; }
-    }
-  </style>
-</head>
-<body>
-  <main class="box">
-    <div class="stripe"></div>
-    <h1>Under Construction</h1>
-    <p>This website is currently being built. Please check back soon!</p>
-    <div class="stripe" style="margin: 2rem auto 0;"></div>
-  </main>
-</body>
-</html>
+<!-- C: CAROUSEL — journey photos. Add as many slides as you want. -->
+<section class="center" style="padding-bottom:1rem"><span class="pill">The journey</span></section>
+<div class="carousel">
+  <div class="media"><!-- <img src="F_Carousel/1.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/2.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/3.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/4.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/5.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/6.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/7.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/8.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/9.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/10.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/11.jpg" alt=""> --></div>
+  <div class="media"><!-- <img src="F_Carousel/12.jpg" alt=""> --></div>
+</div><br>
+<footer><span>THE BITS</span><span>Lorem ipsum dolor sit amet</span></footer></body></html>
