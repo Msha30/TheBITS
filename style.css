@@ -68,9 +68,9 @@ section { padding: 3rem var(--pad); position: relative; }
 .btn:hover { transform: translateY(-2px); }
 
 /* ---------- HOME: hero (D) ---------- */
-.hero { background: var(--c-media); min-height: 70vh; display: grid; place-items: center; overflow: hidden; padding: 0; }
+.hero { background: var(--c-media); min-height: 30vh; display: grid; place-items: center; overflow: hidden; padding: 0; }
 .hero h1 { font-size: var(--t-hero); position: absolute; top: 8%; left: 0; right: 0; text-align: center; z-index: 1; }
-.hero .media { z-index: 2; width: min(80%, 480px); aspect-ratio: 1; margin-top: 12vh; }
+.hero .media { z-index: 2; width: min(80%, 1080px); aspect-ratio: 2.3; margin-top: 12vh; }
 
 /* ---------- HOME: latest project (A) ---------- */
 .latest { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center; }
