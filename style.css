@@ -20,7 +20,7 @@
   --f-body:    'Archivo', Arial, sans-serif;                /* everything else */
 
   /* ---- TEXT SIZES ---- */
-  --t-hero:    clamp(4rem, 17vw, 14rem);   /* "THE BITS" */
+  --t-hero:    18cqw;   /* "THE BITS" */
   --t-title:   clamp(2.4rem, 7vw, 5.5rem); /* page/section titles */
   --t-sub:     clamp(1.4rem, 3vw, 2.2rem); /* project names */
   --t-body:    1rem;
@@ -42,7 +42,7 @@ h2 { font-size: var(--t-sub); }
 section { padding: 3rem var(--pad); position: relative; }
 
 /* ---------- nav ---------- */
-.nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem var(--pad);
+.nav { display: flex; justify-content: center; align-items: center; padding: 1rem var(--pad);
   background: var(--c-bg); border-bottom: 3px solid var(--c-dark); position: sticky; top: 0; z-index: 10; }
 .logo { font-family: var(--f-display); font-size: 1.4rem; }
 .nav ul { display: flex; gap: clamp(1rem, 4vw, 2.5rem); list-style: none; padding: 0; font-weight: 600; }
@@ -55,78 +55,28 @@ section { padding: 3rem var(--pad); position: relative; }
 .media { background: var(--c-media); border-radius: var(--radius); overflow: hidden; position: relative; }
 .media:has(img, video) { background: none; }
 .media img, .media video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.phone { aspect-ratio: 9 / 19; width: min(100%, 240px); }
-.wide  { aspect-ratio: 16 / 9; width: 100%; }
-.bg { position: absolute; inset: 0; border-radius: 0; z-index: 0; } /* full-section background photo */
-
-/* ---------- pills, buttons ---------- */
-.pill { display: inline-block; border: 3px solid var(--c-dark); border-radius: 99px; padding: .2rem 1.2rem;
-  font-weight: 800; background: var(--c-bg); margin-bottom: 1.5rem; }
-.btn { display: inline-block; padding: .6rem 1.6rem; border-radius: 99px; background: var(--c-dark);
-  color: var(--c-on-dark); font-weight: 800; border: 3px solid var(--c-dark); }
-.btn.light { background: var(--c-bg); color: var(--c-text); }
-.btn:hover { transform: translateY(-2px); }
 
 /* ---------- HOME: hero (D) ---------- */
-.hero { background: var(--c-media); min-height: 30vh; display: grid; place-items: center; overflow: hidden; padding: 0; }
-.hero h1 { font-size: var(--t-hero); position: absolute; top: 8%; left: 0; right: 0; text-align: center; z-index: 1; }
-.hero .media { z-index: 2; width: min(80%, 1080px); aspect-ratio: 2.3; margin-top: 12vh; }
+.hero { container-type: inline-size; position: relative; overflow: hidden; padding: 0; background: var(--c-media);
+  aspect-ratio: 2.23 / 1; }
+.hero h1 { position: absolute; top: 5cqw; left: 0; right: 0; text-align: center; white-space: nowrap;
+  font-size: var(--t-hero); z-index: 1; }
+.hero .media { position: absolute; z-index: 2; top: 10cqw; left: 10%; width: 80%; aspect-ratio: 2.3; }
 
-/* ---------- HOME: latest project (A) ---------- */
-.latest { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center; }
-.latest p + p { margin-top: 1rem; }
+/* ---------- LINK LIST (link-tree style) ---------- */
+.links { max-width: 560px; margin: 0 auto; padding: 2.5rem var(--pad) 1rem; display: grid; gap: 1rem; }
+.link-btn { display: block; position: relative; text-align: center; padding: 1.3rem 3rem; border-radius: 28px;
+  background: var(--c-dark); color: var(--c-on-dark); font-weight: 600; font-size: 1.1rem; }
+.link-btn:hover { transform: translateY(-2px); }
 
-/* ---------- HOME: project band (B) ---------- */
-.band { background: var(--c-band); overflow: hidden; }
-.band-inner { position: relative; z-index: 1; display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
-.band .phone { margin: -5rem 0; } /* phone sticks out of the band */
-.band h2 { font-size: var(--t-title); margin-bottom: 1rem; }
-.band p { color: var(--c-on-dark); }
-.band .btns { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
-.band-inner > div:last-child { padding: 5rem 0; }
-
-/* ---------- HOME: carousel (C) ----------
-   Swipe / scroll sideways. Add as many .slide as you want.   */
-.carousel { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--pad) 1rem; }
-.carousel .media { flex: 0 0 min(70%, 320px); aspect-ratio: 3 / 4; scroll-snap-align: center; background-color: #727272; }
-.center { text-align: center; }
-
-/* ---------- PROJECTS page ---------- */
-.page-hero { background: var(--c-media); padding: 5rem var(--pad); text-align: center; position: relative; overflow: hidden; }
-.page-hero h1 { position: relative; z-index: 1; font-size: var(--t-hero); }
-.project { background: var(--c-band); padding-top: 4rem; }
-.project.special { background: var(--c-dark); }
-.project.special h2, .project.special p { color: var(--c-on-dark); }
-.project .pill { position: absolute; top: -1.3rem; left: 50%; transform: translateX(-50%); margin: 0; }
-.project-media { display: flex; gap: 2rem; align-items: flex-end; justify-content: center; }
-.project.flip .project-media { flex-direction: row-reverse; }
-.project-media .wide { max-width: 640px; }
-.project .text { margin-top: 2rem; max-width: 70ch; margin-inline: auto; }
-.project .text p { color: inherit; }
-.achievements { background: var(--c-dark); color: var(--c-on-dark); }
-.achievements ul { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.achievements li { border: 3px solid var(--c-on-dark); border-radius: var(--radius); padding: 1.2rem; }
-.achievements li strong { display: block; font-family: var(--f-display); font-weight: 400; font-size: 1.3rem; }
-.achievements p { color: var(--c-media); }
-.achievements h2 { margin-bottom: 1.5rem; }
-
-/* ---------- CONTACT page ---------- */
-.contact-top { text-align: center; }
-.contact-top p { margin: 1.5rem auto 0; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.2rem; padding: 0 var(--pad) 3rem; }
-.card { background: var(--c-card); border: 3px solid var(--c-dark); border-radius: var(--radius); padding: 1.5rem; }
-.card svg { width: 38px; height: 38px; fill: var(--c-dark); margin-bottom: 1rem; }
-.card strong { display: block; font-family: var(--f-display); font-weight: 400; }
-.card span { color: var(--c-text-soft); font-size: var(--t-small); }
-.contact-photo { height: 340px; border-radius: 0; }
+/* ---------- CONTACT DETAILS ---------- */
+.contact { max-width: 560px; margin: 0 auto; padding: 1.5rem var(--pad) 3rem; display: grid; gap: .8rem; text-align: center; }
+.contact h2 { margin-bottom: .5rem; }
+.contact-item { display: block; width: 100%; font: inherit; font-weight: 600; cursor: pointer; padding: 1rem; border-radius: 28px;
+  background: var(--c-card); color: var(--c-text); border: 3px solid var(--c-dark); }
+.contact-item:hover { background: var(--c-media); }
+.contact-item small { display: block; font-weight: 400; color: var(--c-text-soft); font-size: var(--t-small); }
 
 /* ---------- footer ---------- */
 footer { background: var(--c-dark); color: var(--c-on-dark); padding: 2rem var(--pad); font-size: var(--t-small); display: flex; justify-content: space-between; }
 
-/* ---------- mobile ---------- */
-@media (max-width: 760px) {
-  .latest { grid-template-columns: 1fr; }
-  .project-media, .project.flip .project-media { flex-direction: column; align-items: center; }
-  .band .phone { margin: 0; }
-  .band-inner > div:last-child { padding: 0; }
-}

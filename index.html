@@ -4,12 +4,7 @@
 <title>THE BITS</title><link rel="stylesheet" href="style.css"></head><body>
 <header class="nav">
   <a class="logo" href="index.html">THE BITS</a>
-  <nav><ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="projects.html" class="">Projects</a></li>
-    <li><a href="contact.html" class="">Contact us</a></li>
-  </ul></nav>
-</header>
+  </header>
 <!-- D: HERO. Big text sits BEHIND the png. Put a transparent PNG in the box. -->
 <section class="hero">
   <h1>THE BITS</h1>
@@ -18,52 +13,30 @@
   </div>
 </section>
 
-<!-- A: LATEST PROJECT + DEMO VIDEO -->
-<section class="latest">
-  <div>
-    <span class="pill">Latest project</span>
-    <h2>MyFairview</h2><br>
-    <p>Mar 2016 - Sep 2026 | PBL2 Project</p><p>MyFairview is an IoT-based disaster risk reduction and emergency response management system that provides real-time flood monitoring, automated warnings, emergency vehicle tracking, and community incident reporting to help build a safer and more disaster-resilient Barangay Fairview.</p>
-  </div>
-  <div class="media wide">
-    <video src="F_Website/ExampleVid.mp4" controls></video>
-  </div>
+<!-- ============ LINK LIST ============ -->
+<section class="links">
+  <a class="link-btn" href="#" target="_blank" rel="noopener">Product Demo</a>
+  <a class="link-btn" href="#" target="_blank" rel="noopener">Company Profile</a>
+  <a class="link-btn" href="https://drive.google.com/file/d/137h_nHQdsZjE1wdwB-RceeWCKYjRRDox/view?usp=drive_link" target="_blank" rel="noopener">Start Up Brief</a>
+  <a class="link-btn" href="#" target="_blank" rel="noopener">Tentrep Paper</a>
 </section>
 
-<!-- B: PHONE RECORDING + BACKGROUND PHOTO + BUTTONS -->
-<section class="band">
-  <div class="media bg">
-    <!-- background photo: <img src="F_Images/band-bg.jpg" alt=""> -->
-  </div>
-  <div class="band-inner">
-    <div class="media phone">
-      <video src="F_App/MyFairview_Example.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div>
-      <h2>MyFairview</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-      <div class="btns">
-        <a class="btn light" href="https://msha30.github.io/MyFairview/">Website</a>
-        <a class="btn" href="F_App/myfairview.apk" download>Download APK</a>
-      </div>
-    </div>
-  </div>
+<!-- ============ CONTACT DETAILS ============ -->
+<section class="contact">
+  <h2>Contact us</h2>
+  <button class="contact-item" data-copy="0994 496 1877">0994 496 1877<small></small></button>
+  <button class="contact-item" data-copy="thebitssss@gmail.com">thebitssss@gmail.com<small></small></button>
+  <a class="contact-item" href="https://www.facebook.com/thebitssss" target="_blank" rel="noopener">www.facebook.com/thebitssss<small></small></a>
 </section>
-
-<!-- C: CAROUSEL — journey photos. Add as many slides as you want. -->
-<section class="center" style="padding-bottom:1rem"><span class="pill">The journey</span></section>
-<div class="carousel">
-  <div class="media"><!-- <img src="F_Carousel/1.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/2.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/3.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/4.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/5.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/6.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/7.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/8.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/9.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/10.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/11.jpg" alt=""> --></div>
-  <div class="media"><!-- <img src="F_Carousel/12.jpg" alt=""> --></div>
-</div><br>
-<footer><span>THE BITS</span><span>Lorem ipsum dolor sit amet</span></footer></body></html>
+<footer><span>THE BITS</span><span>Lorem ipsum dolor sit amet</span></footer><script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  var label = b.querySelector('small'), old = label.textContent;
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.dataset.copy).then(function () {
+      label.textContent = 'Copied!';
+      setTimeout(function () { label.textContent = old; }, 1500);
+    });
+  });
+});
+</script>
+</body></html>
