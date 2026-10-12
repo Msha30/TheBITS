@@ -56,12 +56,53 @@ section { padding: 3rem var(--pad); position: relative; }
 .media:has(img, video) { background: none; }
 .media img, .media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* ---------- pills ---------- */
+.pill { display: inline-block; border: 3px solid var(--c-dark); border-radius: 99px; padding: .2rem 1.2rem;
+  font-weight: 800; background: var(--c-bg); margin-bottom: 1.5rem; }
+
 /* ---------- HOME: hero (D) ---------- */
 .hero { container-type: inline-size; position: relative; overflow: hidden; padding: 0; background: var(--c-media);
   aspect-ratio: 2.23 / 1; }
 .hero h1 { position: absolute; top: 5cqw; left: 0; right: 0; text-align: center; white-space: nowrap;
   font-size: var(--t-hero); z-index: 1; }
 .hero .media { position: absolute; z-index: 2; top: 10cqw; left: 10%; width: 80%; aspect-ratio: 2.3; }
+
+/* ---------- COMPANY PROFILE ---------- */
+.profile { max-width: 900px; margin: 0 auto; display: grid; gap: 3.5rem; padding-top: 3.5rem; padding-bottom: 1rem; }
+.profile p { max-width: none; }
+
+/* photo + description */
+.profile-top { display: flex; gap: 2.5rem; align-items: center; }
+.avatar { flex: 0 0 clamp(150px, 28vw, 240px); aspect-ratio: 1; border-radius: 50%; border: 4px solid var(--c-dark); }
+
+/* mission / vision */
+.mv { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.mv-card { border: 3px solid var(--c-dark); border-radius: var(--radius); padding: 1.6rem; }
+.mv-card h3 { font-size: var(--t-sub); margin-bottom: .8rem; }
+.mv-card.dark { background: var(--c-dark); }
+.mv-card.dark h3, .mv-card.dark p { color: var(--c-on-dark); }
+
+/* team names */
+.team ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .7rem; }
+.team li { background: var(--c-card); border: 3px solid var(--c-dark); border-radius: 99px; padding: .4rem 1.2rem; font-weight: 600; }
+
+/* achievements timeline */
+.achv ul { list-style: none; padding: 0 0 0 1.4rem; border-left: 3px solid var(--c-dark); display: grid; gap: 1.6rem; }
+.achv li { display: flex; gap: 1.5rem; position: relative; }
+.achv li::before { content: ""; position: absolute; left: calc(-1.4rem - 9px); top: .5rem; width: 15px; height: 15px;
+  border-radius: 50%; background: var(--c-dark); border: 3px solid var(--c-bg); box-sizing: content-box; }
+.achv li b { font-family: var(--f-display); font-weight: 400; font-size: var(--t-sub); min-width: 4.5rem; line-height: 1.1; }
+.achv li strong { font-family: var(--f-display); font-weight: 400; font-size: 1.15rem; }
+
+/* tagline */
+.tagline { font-family: var(--f-display); font-size: var(--t-title); line-height: .95; text-align: center;
+  color: var(--c-text); max-width: none; padding: 1.5rem 0; letter-spacing: -.02em; }
+
+@media (max-width: 600px) {
+  .profile-top { flex-direction: column; text-align: center; }
+  .mv { grid-template-columns: 1fr; }
+  .achv li { flex-direction: column; gap: .2rem; }
+}
 
 /* ---------- LINK LIST (link-tree style) ---------- */
 .links { max-width: 560px; margin: 0 auto; padding: 2.5rem var(--pad) 1rem; display: grid; gap: 1rem; }
@@ -79,4 +120,3 @@ section { padding: 3rem var(--pad); position: relative; }
 
 /* ---------- footer ---------- */
 footer { background: var(--c-dark); color: var(--c-on-dark); padding: 2rem var(--pad); font-size: var(--t-small); display: flex; justify-content: space-between; }
-
